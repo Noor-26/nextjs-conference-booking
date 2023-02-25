@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* defining fonts */
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+.Abeezee{
+  font-family: 'ABeeZee', sans-serif;
+}
+.gabriela{
+  font-family: 'Gabriela';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* custom css for react calender */
 .react-calendar{
   border :1px solid #e3e3e3;
 }
@@ -28,6 +43,7 @@
 abbr:where([title]){
   text-decoration: none;
 }
+/* hiding number input arrows */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
