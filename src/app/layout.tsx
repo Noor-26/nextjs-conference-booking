@@ -13,6 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Darkfam Conference Room Booking System</title>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='use-credentials'/>
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=DM+Sans:wght@500&family=Gabriela&display=swap" rel="stylesheet"/>

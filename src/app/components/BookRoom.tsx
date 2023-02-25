@@ -189,7 +189,7 @@ const BookRoom = () => {
               {moment(timeSlot.startTime).format('h:mm A')} 
             </button>
           ))}
-        </div> : <h1 className='capitalize text-xl  text-[#ff8259] text-center'> No schedule on this</h1> }
+        </div> : <h1 className='capitalize text-xl  text-[#ff8259] text-center'> No room avaliable on this day</h1> }
       </div>
     )}
     </div>
