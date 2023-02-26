@@ -13,12 +13,11 @@
   font-family: 'Gabriela';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
 }
 .upper_blob{
   position: absolute;
 width: 320px;
-height: 320px;
+height: 40vh;
 left: -154px;
 top: -56px;
 
@@ -29,8 +28,8 @@ filter: blur(75px);
 .middle_blob{
   bottom: 0;
   position: absolute;
-  width: 386px;
-  height: 385px;
+  width: 40vw;
+  height: 50vh;
   /* left: 1076px; */
   /* left: 0; */
   right: 3px;

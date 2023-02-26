@@ -203,7 +203,7 @@ const BookRoom = () => {
       <button
          onClick={onBookNowClick}
         disabled={!selectedTime}
-        className={`bg-[#ff8259] text-white py-2 px-4 rounded-lg focus:outline-none ${
+        className={`bg-[#039800] text-white py-2 px-4 gabriela text-[16px] rounded-full focus:outline-none ${
           !selectedTime ? 'opacity-50 cursor-not-allowed' : ''
         }`}
       >
