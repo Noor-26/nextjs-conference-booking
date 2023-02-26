@@ -25,7 +25,7 @@ const Navber = () => {
       </ul>
     </div>
   <div className="flex flex-nowrap">
-    <a className="btn btn-ghost normal-case text-xl"><FaHome className='mx-2 text-[#F25A2C] text-[20px]'/>Saarte Investeering</a>
+    <a className="btn btn-ghost nav_head_font  items-center normal-case text-xl"><FaHome className='mx-2 text-[#F25A2C] relative bottom-[2px] text-[25px]'/>Saarte Investeering</a>
   </div>
   </div>
   <div className=" navbar-end hidden lg:flex">

@@ -199,11 +199,11 @@ const BookRoom = () => {
     )}
     </div>
 
-    <div className="flex justify-center">
+    <div className="flex ml-auto">
       <button
          onClick={onBookNowClick}
         disabled={!selectedTime}
-        className={`bg-[#039800] text-white py-2 px-4 gabriela text-[16px] rounded-full focus:outline-none ${
+        className={`bg-[#039800] text-white py-2 px-4 gabriela  text-[16px] rounded-full focus:outline-none ${
           !selectedTime ? 'opacity-50 cursor-not-allowed' : ''
         }`}
       >
