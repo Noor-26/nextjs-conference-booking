@@ -18,7 +18,7 @@ export default function RootLayout({
 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='use-credentials'/>
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=DM+Sans:wght@500&family=Gabriela&family=Lusitana&display=swap" rel="stylesheet"/>
       </head>
-      <body>{children}</body>
+      <body className='bg-white'>{children}</body>
     </html>
   )
 }

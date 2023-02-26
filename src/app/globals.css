@@ -5,6 +5,11 @@
 /* defining fonts */
 *{
   font-family: 'DM Sans', sans-serif;
+  
+}
+body{
+  background-color: white;
+  
 }
 .Abeezee{
   font-family: 'ABeeZee', sans-serif;
