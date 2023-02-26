@@ -50,6 +50,7 @@ interface BookingSlot {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
+      zIndex:"999"
     },
   };
   
@@ -138,16 +139,19 @@ const BookRoom = () => {
       const timeSlots = getTimeSlots();
       
   return (
-    <div className='max-w-7xl mx-auto min-h-[90vh] flex justify-center px-8'>
-        <div className='flex flex-col justify-center items-center border my-auto rounded-lg py-4  px-6'>
+    <div className='max-w-7xl mx-auto min-h-[90vh] flex justify-center px-8 '>
+      <div className="upper_blob z-[-1]"></div>
+      <div className="middle_blob z-[-1]"></div>
+
+        <div className='flex flex-col justify-center items-center border my-auto rounded-lg py-4  px-6 bg-white '>
 
         {/* showing user current time */}
     <div >
-    <h1 className="text-3xl text-center font-bold mb-4">Time Now : {currentTime}</h1>
+    <h1 className="text-xl md:text-3xl text-center font-bold mb-4">Time Now : {currentTime}</h1>
     </div>
     {/* getting meeting duration  */}
     <div className="mb-4 flex justify-center items-center">
-      <label htmlFor="duration" className="block text-gray-700 text-xl  md:text-2xl mb-2">
+      <label htmlFor="duration" className="block text-gray-700   md:text-2xl mb-2">
         Enter Meeting Duration(min) 
       </label>
       <input
@@ -172,6 +176,7 @@ const BookRoom = () => {
         className="border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
     </div>
+
     {selectedDate  && (
       <div className="mb-5 ml-3">
         <label htmlFor="time-picker" className="block text-gray-700 Abeezee font-bold mb-2">
@@ -207,6 +212,7 @@ const BookRoom = () => {
     </div>
     </> }
     </div>
+
     <Modal isOpen={isModalOpen} onRequestClose={closeModal} style={modalStyles}>
       <div className='text-center min-w-[60vw]'>
 

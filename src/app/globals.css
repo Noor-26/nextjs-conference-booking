@@ -15,6 +15,31 @@
   font-weight: 400;
   font-size: 18px;
 }
+.upper_blob{
+  position: absolute;
+width: 320px;
+height: 320px;
+left: -154px;
+top: -56px;
+
+background: #EF5A81;
+opacity: 0.5;
+filter: blur(75px);
+}
+.middle_blob{
+  bottom: 0;
+  position: absolute;
+  width: 386px;
+  height: 385px;
+  /* left: 1076px; */
+  /* left: 0; */
+  right: 3px;
+  /* top: 630px; */
+  background: #FF7122;
+  opacity: 0.2;
+  filter: blur(75px);
+}
+
 
 /* custom css for react calender */
 .react-calendar{
@@ -50,3 +75,4 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
