@@ -84,9 +84,20 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.textarea{
+  min-width: 60vw;
+}
+.textarea::placeholder {
+  color: black;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 500;
+}
 
 @media (max-width:420px) {
   .react-calendar{
     width: 100%;
+  }
+  .textarea{
+    min-width: 70vw;
   }
 }

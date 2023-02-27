@@ -202,7 +202,10 @@ const BookRoom = () => {
       </div>
     )}
     </div>
-
+<div>
+ 
+  <textarea className="textarea textarea-bordered focus:outline-none min-h-[30vh]" placeholder="Additonal Details"></textarea>
+</div>
     <div className="flex ml-auto">
       <button
          onClick={onBookNowClick}
