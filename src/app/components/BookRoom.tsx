@@ -76,10 +76,13 @@ const BookRoom = () => {
     
       // function for  handling the duration time   
     const handleDurationChange = (event: React.ChangeEvent<HTMLInputElement> & KeyboardEvent<HTMLInputElement>) => {
-        setDuration(event.target.value);
-        if (event.key === 'Enter') {
+      const value = event.target.value;
+      setDuration(value);
+      if (value !== '' && parseInt(value) === 0) {
+        setShowCalendar(false);
+      } else if (event.key === 'Enter') {
         setShowCalendar(true);
-        }
+      }
         };
     
       // function for selecting the calender date 
@@ -106,13 +109,14 @@ const BookRoom = () => {
 
   // function for getting the time slots
       const getTimeSlots = (): BookingSlot[] => {
+      
         const slots: BookingSlot[] = [];
         const schedule = bookingData.schedule;
         const start = moment(selectedDate).set({ hour: 0, minute: 0, second: 0 });
         const end = moment(selectedDate).set({ hour: 23, minute: 59, second: 59 });
         const durationInMinutes = parseInt(duration, 10);
     
-        for (let i = 0; i < schedule.length; i++) {
+        for (let i = 0; i < schedule?.length; i++) {
           const startDateTime = moment(schedule[i].start);
           const endDateTime = moment(schedule[i].end);
     
@@ -151,7 +155,7 @@ const BookRoom = () => {
     </div>
     {/* getting meeting duration  */}
     <div className="mb-4 flex justify-center items-center">
-      <label htmlFor="duration" className="block text-gray-700   md:text-2xl mb-2">
+      <label htmlFor="duration" className="block text-gray-700  text-[14px]  md:text-2xl mb-2">
         Enter Meeting Duration(min) 
       </label>
       <input
@@ -159,7 +163,7 @@ const BookRoom = () => {
         type="number"
         value={duration}
         onChange={handleDurationChange} onKeyDown={handleDurationChange} 
-        className="appearance-none border rounded w-[15%] py-2 px-3 mx-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
+        className="appearance-none border rounded w-[20%] md:w-[15%] py-2 px-3 mx-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
       />
     </div>
 
@@ -183,11 +187,11 @@ const BookRoom = () => {
           Select Time
         </label>
        { timeSlots.length > 0 ?<div className="grid grid-cols-3 md:grid-cols-4 gap-4  py-2   md:max-h-[45vh] overflow-y-auto ">
-          {timeSlots.map((timeSlot) => (
+          {timeSlots?.map((timeSlot) => (
             <button 
             key={timeSlot.startTime.toISOString()}
               onClick={() => onTimeSelect(timeSlot.startTime)}
-              className={`py-2 px-3 rounded-lg focus:outline-none text-[14px] ${
+              className={`py-2 px-3 rounded-lg focus:outline-none text-[12px] md:text-[14px] ${
                 moment(timeSlot.startTime).isSame(selectedTime) ? 'bg-[#FFE7DF] text-[#ff8259]' : 'bg-gray-200'
               }`}
             >

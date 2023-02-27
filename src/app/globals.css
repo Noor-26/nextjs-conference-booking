@@ -7,6 +7,11 @@
   font-family: 'DM Sans', sans-serif;
   
 }
+body{
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
 .Abeezee{
   font-family: 'ABeeZee', sans-serif;
@@ -35,10 +40,9 @@ filter: blur(75px);
   position: absolute;
   width: 40vw;
   height: 50vh;
-  /* left: 1076px; */
-  /* left: 0; */
+  
   right: 3px;
-  /* top: 630px; */
+  
   background: #FF7122;
   opacity: 0.2;
   filter: blur(75px);
@@ -48,6 +52,7 @@ filter: blur(75px);
 /* custom css for react calender */
 .react-calendar{
   border :1px solid #e3e3e3;
+ 
 }
 .react-calendar__tile--active{
   background-color: #FFE7DF;
@@ -80,3 +85,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@media (max-width:420px) {
+  .react-calendar{
+    width: 100%;
+  }
+}
